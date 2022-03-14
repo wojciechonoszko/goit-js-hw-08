@@ -1,5 +1,4 @@
-//const throttle = require('lodash.throttle');
-// const _ = require('lodash');
+
 const iframe = document.querySelector('iframe');
     const player = new Vimeo.Player(iframe);
 
@@ -10,16 +9,6 @@ const iframe = document.querySelector('iframe');
     player.getVideoTitle().then(function(title) {
         console.log('title:', title);
     });
-
-const add = _.add(5,6);
-console.log(add);    
-const myFn = () => {
-    console.log('test');
-}
-
-const myNewFn = _.throttle(() => {
-    console.log('test');
-}, 300);
 
 
 const onPlay = function(data) {
@@ -56,14 +45,4 @@ player.setCurrentTime(localStorage.getItem("videoplayer-current-time")).then(fun
     }
 });
 
-
-
-
-
-
-
-
-    //  player.ready().then(() => {
-    //   player.getDuration().then()((data) => console.log(data));
-    // }).catch((err) => console.log(err));
   
